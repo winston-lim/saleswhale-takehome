@@ -1,0 +1,172 @@
+.container {
+    position: relative;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 38px 20px 38px;
+    height: 100px;
+
+    &Title {
+       display: flex;
+       // justify-content: space-between;
+       align-items: center;
+
+       &Icon {
+           width: 30px;
+           height: 30px;
+           color: #A4A6A8;
+       }
+
+       &Text {
+           margin-left: 12px;
+           font-size: 36px;
+           color: #1A1919;
+           width: 90px;
+       }
+    }
+
+    &Action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        width: 200px;
+        height: 36px;
+        border-radius: 4px;
+        background-color: #40D2BF;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: #59e3d1;
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        &Text {
+            color: white;
+            font-size: 16px;
+        }
+    }
+}
+
+.NavBar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 60px;
+    padding: 0px 44px;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0px 30px 30px -29px rgba(0, 0, 0, 0.1);
+
+    &Item {
+        color: black;
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 20px 16px 20px 16px;
+        height: 100%;
+        margin-right: 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            border-bottom: 3px solid #0083E3;
+        }
+
+        &Selected {
+            @extend .NavBarItem;
+            border-bottom: 3px solid #0083E3;
+        }
+
+        &:last-child  {
+            position: absolute;
+            right: 44px;
+        }
+    }
+}
+
+.Body {
+    padding: 44px;
+    background-color: #F1F4F8;
+    display: flex;
+}
+
+.TeamCard {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    margin-right: 32px;
+    padding-bottom: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+    &Header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 28px 28px 22px 28px;
+        border-bottom: 1px solid #EFEFEF;
+
+        &Title {
+            color: black;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &SubTitle {
+            color: #7F7F7F;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    &Body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 15px;
+        padding: 30px 28px;
+    }
+
+    &Button {
+        color: black;
+        align-self: center;
+        cursor: pointer;
+    }
+}
+
+.ActivityCard {
+    min-width: 316px;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+    &Header {
+        width: 100%;
+        padding: 29px 29px 22px 29px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #EFEFEF;
+        &Title {
+            color: black;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    &Body {
+        display: flex;
+        max-width: 316px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 15px;
+        max-height: 520px;
+        overflow: auto;
+    }
+}

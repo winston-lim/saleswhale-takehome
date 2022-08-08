@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.SideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100vh;
+    padding-top: 10px;
+    background-color: #042235;
+
+    &Item  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        &:hover {
+            border-right: 5px solid white ;
+            background-color: #2995DA;
+        }
+
+        &Selected {
+            @extend .SideBarItem;
+            border-right: 5px solid white ;
+            background-color: #2995DA;
+            &Logo {
+                opacity: 1;
+            }
+        }
+
+        &Logo {
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &:last-child {
+            position: absolute;
+            bottom: 20px;
+            margin: 0;
+        }
+    }
+}
+
+.MainContent {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: white;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+    height: 80px;
+    border-bottom: #E2E2E2 solid 1px;
+
+    &AppName {
+        display: flex;
+        align-items: center;
+        width: 128px;
+        height: 100%;
+        font-size: 18px;
+        line-height: 22px;
+        color: #1A1919;
+        opacity: 0.5;
+        border-right: solid 1px #E2E2E2;
+    }
+
+    &Content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding-left: 28px;
+
+        &Title {
+            max-width: 182px;
+            font-size: 18px;
+            line-height: 22px;
+            color: black
+        }
+
+        &Actions {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.MailAction {
+    position: relative;
+    cursor: pointer;
+}
+
+.UserActions {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+
+    &Title {
+        font-size: 14px;
+        line-height: 17px;
+        color: black;
+        opacity: 0.5;
+        margin-right: 8px;
+    }
+
+    &Avatar {
+        border-radius: 50%;
+    }
+
+    &Button {
+        cursor: pointer;
+        margin-left: 10px;
+    }
+}
+
+.Body {
+    flex-grow: 1;
+    // background-color: lightblue;
+}
